@@ -1,0 +1,17 @@
+[package]
+name = "treasurer"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+anyhow = "1.0.71"
+candid = "0.8"
+hex = "0.4.3"
+ic-cdk = "0.7"
+ic-web3 = "0.1.7"
+serde = "1.0.163"

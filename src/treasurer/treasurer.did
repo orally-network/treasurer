@@ -1,0 +1,20 @@
+type InitConfig = record {
+    chain_rpc : text;
+    token_addr : text;
+    siwe_signer_canister : principal;
+    key_name : text;
+    treasurer : text;
+};
+
+type Error = variant { Ok : null; Err : text};
+
+type TextResponse = variant { Ok : text; Err : text};
+
+
+
+service : {
+    init : (cfg : InitConfig) -> ();
+    register_taxpayer : (msg : text, sig : text) -> (TextResponse);
+    get_taxpayer : (pub_addr: text) -> (TextResponse);
+    deposit : (req : DepositRequest) -> (Error);
+}

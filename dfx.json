@@ -1,0 +1,17 @@
+{
+  "canisters": {
+    "treasurer": {
+      "candid": "src/treasurer/treasurer.did",
+      "package": "treasurer",
+      "type": "rust"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
