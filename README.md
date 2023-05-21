@@ -2,7 +2,7 @@
 
 ## Deploy
 ```sh
-export ENCODED_INIT_CONFIG=$(didc encode '(record {token_addr="338662C6e113aD9CfA4E2e755931643D8Cf1884B"; chain_rpc="https://sepolia.infura.io/v3/d20be327500c45819a1a3b850daec0e2"; siwe_signer_canister=principal "be2us-64aaa-aaaaa-qaabq-cai"; key_name="dfx_test_key"; chain_id=11155111:nat; treasurer="E86C4A45C1Da21f8838a1ea26Fc852BD66489ce9"})')
+export ENCODED_INIT_CONFIG=$(didc encode '(record {token_addr="338662C6e113aD9CfA4E2e755931643D8Cf1884B"; chain_rpc="https://sepolia.infura.io/v3/d20be327500c45819a1a3b850daec0e2"; siwe_signer_canister=principal "bkyz2-fmaaa-aaaaa-qaaaq-cai"; key_name="dfx_test_key"; chain_id=11155111:nat; treasurer="E86C4A45C1Da21f8838a1ea26Fc852BD66489ce9"})')
 dfx deploy treasurer --argument "$ENCODED_INIT_CONFIG" --argument-type raw
 dfx canister call treasurer init_controllers
 ```

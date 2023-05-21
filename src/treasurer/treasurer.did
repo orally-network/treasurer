@@ -10,7 +10,15 @@ type Error = variant { Ok : null; Err : text};
 
 type TextResponse = variant { Ok : text; Err : text};
 
+type DepositType = variant {
+    Erc20 : null;
+};
 
+type DepositRequest = record {
+    amount : nat;
+    taxpayer : text;
+    deposit_type : DepositType;
+};
 
 service : {
     init : (cfg : InitConfig) -> ();

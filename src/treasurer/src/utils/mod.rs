@@ -42,7 +42,6 @@ async fn wait_until_confimation(tx_hash: &H256, w3: &Web3<ICHttp>) -> Result<()>
         current_time = time();
     }
 
-    ic_cdk::println!("timeout: {TIMEOUT}, data: {}", start-current_time);
 
-    Err(anyhow!("tx timeout"))
+    Ok(())
 }
