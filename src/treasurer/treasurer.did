@@ -22,6 +22,7 @@ type DepositRequest = record {
 
 service : {
     init : (cfg : InitConfig) -> ();
+    init_controllers : () -> ();
     register_taxpayer : (msg : text, sig : text) -> (TextResponse);
     get_taxpayer : (pub_addr: text) -> (TextResponse);
     deposit : (req : DepositRequest) -> (Error);
